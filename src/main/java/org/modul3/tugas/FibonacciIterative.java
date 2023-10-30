@@ -48,10 +48,14 @@ public class FibonacciIterative {
         int nilai = scanner.nextInt();
 
         FibonacciIterative fibonacci = new FibonacciIterative(nilai);
+        long startTime = System.nanoTime();
         long result = fibonacci.calculate();
+        long endTime = System.nanoTime();
+        long executionTime = endTime - startTime;
 
         System.out.println("Perhitungan deret Fibonacci hingga suku ke " + nilai);
         System.out.println("Iteratif: Hasil = " + result);
+        System.out.println("Waktu Eksekusi: " + executionTime + " ns");
 
         scanner.close();
     }
